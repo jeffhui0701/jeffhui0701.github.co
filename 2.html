@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TensorFlow</title>
+    <link rel="stylesheet" href="css/stylr.css">
+</head>
+
+<body>
+    <div class="nav">
+      <div class="tit">
+      <ul>
+      <li><a href="index.html">homepage</a></li>
+      <li><a href="1.html">MINIST dataset</a></li>
+      <li class="active"><a href="2.html">TensorFlow</a></li>
+      <li><a href="3.html">PyTorch</a></li>
+      <li><a href="4.html">Flux</a></li>
+      <li><a href="5.html">Evaluation</a></li>
+      </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="txt">
+            <br>
+          <h3>TensorFlow:</h3>
+            <p>Build a simple modal with Keras (the high level api of Tensorflow)&nbsp; </p>
+            <p>Set Up </p>
+          <div> <img src="images/1.jpg"></div>
+            <p>import the tensorflow packages to order to use the keras API </p>
+            <p>&nbsp;</p>
+            <p>Load the preset dataset </p>
+          <div> <img src="images/2.jpg"></div>
+            <p>keras come with several preset dataset , one of them is MNIST dataset. A set of images of hand written numbers. The training data of the MNIST dataset are ranged from 0 to 255. Therefore we need to scale the number by divide 255 </p>
+            <p>&nbsp;</p>
+            <p>Build the machine learning model </p>
+              <div> <img src="images/3.jpg"></div>
+            <p>Here we build a keras Sequential model. It is a stacking layer with only one input and one output. Moreover, for most of the models in tensorflow ,they are composed of layers. Which means a model consists of different layers. This model we built used dense,dropout and flatten. </p>
+            <p>Dense layer used a activation function and compute the weight of each node with</p>
+            <p align="center" >Output = Activation(Weight * Input + Bias) </p>
+            <p>And create a fully connected layer. On the other hand, the dropout layer is a regularization method where it drops out neurons in the networks to prevent overfitting. The flatten layer simply flatten the data and does not affect the batch size. </p>
+            <p>&nbsp;</p>
+            <p>The modal returns a vector of log-odds score for each class </p>
+            <p>training&nbsp; </p>
+              <div> <img src="images/4.jpg"></div>
+            <p>The softmax function turns the log odd score into proabilities. And we define the loss fucntion with SparseCategoricalCrossentropy. </p>
+            <p>Before actual training we need to compile the modal and set an optimizer, set the loss function to the loss function we define. The adam optimizer is a stochastic gradient descent method </p>
+           <div> <img src="images/5.jpg"></div>
+            <p>Evaluation </p>
+              <div> <img src="images/6.jpg"></div>
+          <div> <img src="images/7.jpg"></div>
+            <p>To evaluate a model, we need to run model.evaluate. Then it will compute the functions loss and the accuracy of the modal </p>
+             <div> <img src="images/8.jpg"></div>
+             <div> <img src="images/9.jpg"></div>
+            <p>We can also turn the result into a probability matrix by applying the softmax function. </p>
+            <p>&nbsp;</p>
+      </div>
+    </div>
+    <div class="foot">
+        <p>TensorFlow</p>
+    </div>
+</body>
+
+</html>

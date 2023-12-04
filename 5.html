@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation</title>
+    <link rel="stylesheet" href="css/stylr.css">
+</head>
+
+<body>
+    <div class="nav">
+      <div class="tit">
+      <ul>
+      <li><a href="index.html">homepage</a></li>
+      <li><a href="1.html">MINIST dataset</a></li>
+      <li><a href="2.html">TensorFlow</a></li>
+      <li><a href="3.html">PyTorch</a></li>
+      <li><a href="4.html">Flux</a></li>
+      <li class="active"><a href="5.html">Evaluation</a></li>
+      </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="txt">
+            <br>
+          <h3>Evaluation:</h3>
+            <p>In this part, we evaluate three deep learning tools, PyTorch, TensorFlow, and Flux, and compare them regarding community, industry adoption, ease of use, and general performance. Nonetheless, we also look for the best use case of each tool based on its features. </p>
+            <p>A.Ecosystem</p>
+            <p>First, all three of the tools are open source which means the ecosystem is highly relevant to the number of users since the users are the one contributing to the community. Regarding community size,Tensorflow has the most extensive user base and mature ecosystem among the three tools. Tensorflow was founded in 2015, which is the earliest of the three. Hence, it accumulates more users than the other two. Also, TensorFlow provides a wide range of tools and libraries. It attracts more developers by providing a comprehensive development platform. <br>
+            On the other hand, PyTorch is the main contender with Tensorflow as researchers tend to use PyTorch(He, 2021). The figure below shows that a majority of papers are implemented in PyTorch. </p>
+         <div> <img src="images/a1.jpg"></div>
+            <p>B.Industry adoption</p>
+            <p>TensorFlow and PyTorch were both developed by tech giants. Google developed TensorFlow, and PyTorch was developed by Meta, formerly named Facebook. Hence, they have raised much attention in the industry since they were created. Companies favored them because they were more likely to be maintained and evolved. Moreover, TensorFlow provides an easy integration from deployment to production systems, which is essential in commercializing the Artificial Intelligence model. For example, Twitter uses Tensorflow to develop its tweet ranking system(Community, 2019). PyTorch is widely adopted in computer vision-related commercial applications due to its advantage in building machine learning models with convolutional neural networks(Novac et al., 2022). </p>
+            <p>In comparison, Flux has less industrial adoption. Flux has seen growing interest and adoption in academia and certain research domains where Julia is favored. However, there are fewer use cases of Flux in commercial applications. Also, companies are more afraid to use a new model since it usually means less support. </p>
+            <p>C.Ease of use</p>
+            <p>The learning curve of using Flux depends on the user's familiarity with the Julia programming language. If the user is familiar with Julia, Flux's design and syntax are intuitive. However, Flux has less documentation and resources, which may make it more difficult for Flux's users to troubleshoot. Also, Flux emphasizes user customization and flexibility. However, these functions could be overwhelming for beginners as they require more experience in developing deep-learning projects. </p>
+          <div> <img src="images/a2.jpg"></div>
+            <p>On the other hand, TensorFlow developed a high-level API called Kera, which is straightforward to use. Moreover, it focuses on providing a user-friendly experience for beginners to develop deep learning projects. PyTorch also developed a user-friendly API to reduce beginners' learning curve. Nevertheless, Tensorflow and PyTorch are compatible with Python and integrated with popular libraries such as NumPy, making them accessible to many developers. Moreover, they both have a variety of documentation and official tutorials for beginners. An active and large community helps users to tackle various issues in their way of learning to use the tool. </p>
+            <p>A.General performance</p>
+            <p>The performance of deep learning tools depends on their scalability, training speed, and hardware support. TensorFlow has a set of comprehensive tools for deploying large-scale machine learning models. It supports distributed computing, allowing users to train models on machine clusters. Pytorch also has features supporting distributed training, such as DistributedDataParallel(Li et al., 2020). Although PyTorch does not have the same scalability optimizations as TensorFlow, it supports integration with popular distributed frameworks that cover its lack of support on scalability. </p>
+            <p>On the other hand, Flux is designed to be scalable. Moreover, Julia, the programming language used in Flux, has built-in distributed and parallel computing features. However, Flux does not have much support for scalable solutions due to a relatively small community size. Therefore, Tensorflow is the most mature tool in terms of scalability. </p>
+            <p>The training speed of a machine learning model is a complicated topic with many variables. Here, we concentrate on the technical implementation of the tool that determines the three models' respective speeds. PyTorch facilitates automatic differentiation and effective GPU utilization. Distributed computing is another tool it can utilize to increase training speed. However, it used a dynamic model creation approach, leading to slower training rates. By contrast, Flux makes use of Julia's high-performance computing powers. The total training pace of Flux models is facilitated by Julia's just-in-time (JIT) compilation and effective mathematical operations. </p>
+            <p>On the other hand, TensorFlow is widely considered a performance-friendly tool (Dai et al., 2021). The core of TensorFlow is developed in C++, which is a strong indicator of its efficiency. It also utilizes various techniques to optimize its training speed in large-scale models. Overall, TensorFlow generally has a fast training speed.&nbsp; </p>
+            <p>Finally, all three models provide the functionality of hardware-specific optimizations such as Compute Unified Device Architecture(CUDA). It is vital for machine learning model training to have efficient GPU utilization performance-wise. However, TensorFlow and PyTorch have a more comprehensive range of hardware support and are also compatible with specialized accelerators like TPUs. The following table shows the performance ranking of three tools. </p>
+           <center> <table width="626" height="168" border="0" cellspacing="0" >
+              <tr>
+                <td height="42" valign="top" > <div align="center"></div></td>
+                <td valign="top" ><div align="center">Scalability </div></td>
+                <td valign="top" ><div align="center">Training speed </div></td>
+                <td valign="top" ><div align="center">Hardware support </div></td>
+              </tr>
+              <tr>
+                <td height="42" valign="top" ><div align="center">1st </div></td>
+                <td valign="top" ><div align="center">TensorFlow </div></td>
+                <td valign="top" ><div align="center">TensorFlow </div></td>
+                <td valign="top" ><div align="center">TensorFlow </div></td>
+              </tr>
+              <tr>
+                <td height="42" valign="top" ><div align="center">2nd </div></td>
+                <td valign="top" ><div align="center">PyTorch </div></td>
+                <td valign="top" ><div align="center">Flux </div></td>
+                <td valign="top" ><div align="center">PyTorch </div></td>
+              </tr>
+              <tr>
+                <td height="42" valign="top" ><div align="center">3rd </div></td>
+                <td valign="top" ><div align="center">Flux </div></td>
+                <td valign="top" ><div align="center">PyTorch </div></td>
+                <td valign="top" ><div align="center">Flux </div></td>
+              </tr>
+            </table></center>
+            <p>To conclude, TensorFlow has the best general performance of the three models. </p>
+            <p>B.Optimal use cases</p>
+            <p>We conclude the optimal use cases for each model based on the previous comparison and evaluation. </p>
+            <p>	TensorFlow </p>
+            <p>TensorFlow is excellent if you want to develop a commercial machine-learning application. It has the most extensive ecosystem and a high industry adoption. It provides an all-round development experience and supports a scalable solution for future improvement. It also has the best performance, which is vital in business use cases.&nbsp; </p>
+            <p>PyTorch </p>
+            <p>PyTorch is suitable in academic areas and great for researchers to build machine learning models since it has a smaller learning curve and a larger user community. Researchers can build their model with the smallest amount of time and resources.&nbsp; </p>
+            <p>Flux </p>
+            <p>Flux has a relatively small ecosystem, and compared to TensorFlow, it performs poorly. However, if the user knows Julia programming, Flux provides a user-friendly and customized experience in developing machine learning </p>
+            <p>I.CONCLUSION</p>
+            <p>In conclusion, this report used 3 deep learning tools, including tensorflow, PyTorch and Flux, to train and test the MNIST dataset.&nbsp; </p>
+            <p>This report also compared the 3 deep learning tools with the ecosystem, industry adoption, learning curve, general performance and the optimal use cases. </p>
+            <p>For the ecosystem, Flux has a smaller community than tensorflow and PyTorch.&nbsp; </p>
+            <p>For industry adoption, PyTorch and tensorflow are the major deep learning tools in the market.&nbsp; </p>
+            <p>For the learning curve of the deep learning tools, tensorflow has the Kera (high-level API) and PyTorch using Python (common programming language), so they are easier to use. </p>
+            <p>For the deep learning performance, PyTorch and tensor flow have hardware support such as CUDA which is supported by NVIDIA, so the deep learning result is usually faster and higher accuracy. </p>
+            <p>For the optimal case, tensorflow is a good choice for developing a commercial deep learning usage. PyTorch is commonly seen in the academic area. Flux can help users to customize deep learning.&nbsp; </p>
+            <p>Overall, tensorflow and PyTorch are the two popular deep learning tools in the machine learning area, because they have a larger community and better hardware support. If the user wants a customized deep learning experience, Flux would be a good choice. </p>
+           
+      </div>
+    </div>
+    <div class="foot">
+        <p>Evaluation</p>
+    </div>
+</body>
+
+</html>

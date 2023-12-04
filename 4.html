@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flux</title>
+    <link rel="stylesheet" href="css/stylr.css">
+</head>
+
+<body>
+    <div class="nav">
+      <div class="tit">
+      <ul>
+      <li><a href="index.html">homepage</a></li>
+      <li><a href="1.html">MINIST dataset</a></li>
+      <li><a href="2.html">TensorFlow</a></li>
+      <li><a href="3.html">PyTorch</a></li>
+      <li class="active"><a href="4.html">Flux</a></li>
+      <li><a href="5.html">Evaluation</a></li>
+      </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="txt">
+            <br>
+          <h3>Flux:</h3>
+            <p>C. Pre-processing data </p>
+             <div> <img src="images/z1.jpg"></div>
+            <p>Figure. load MNIST dataset </p>
+            <p>We import the MNIST dataset which contains 60,000 training data and 10,000 testing data from the MLDatasets. </p>
+            <div> <img src="images/z2.jpg"></div>
+            <p>Figure. flatten() function </p>
+             <div> <img src="images/z3.jpg"></div>
+            <p>Figure. flatten concept </p>
+            <p>&nbsp;</p>
+            <p>Since the model can only accept vectors, we use the flatten() function from the Flux.jl package to change the 28x28 matrix into a 784 column vector.&nbsp; </p>
+           <div> <img src="images/z4.jpg"></div>
+          <p>Figure. flatten training set result </p>
+            <div> <img src="images/z5.jpg"></div>
+            <p>Figure. flatten testing set result .</p>
+            <p>The result is the training set becomes a 784x60,000 matrix and the testing set becomes a 784x10,000 matrix. </p>
+             <div> <img src="images/z6.jpg"></div>
+            <p>Figure. onehotbatch() function </p>
+            <p>&nbsp;</p>
+            <p>There are 10 types of handwritten digits [0,9]. We use the onhotbatch() function to concatenate the i type elements into a 1x10 column vector, the i row is equal to 1, otherwise 0.&nbsp; </p>
+             <div> <img src="images/z7.jpg"></div>
+            <p>Figure. onehotbatch() function result&nbsp; </p>
+            <p>&nbsp;</p>
+            <p>The result is a 10x60,000 one-hot matrix. For example the type of column vector 1x10 is 0, because the value of&nbsp; 1x2 =1. </p>
+            <p>&nbsp;</p>
+            <p>C. Building Model using Flux.jl package&nbsp; </p>
+           <div> <img src="images/z8.jpg"></div>
+            <p>Figure. ANN model </p>
+          <div> <img src="images/z9.jpg"></div>
+            <p>Figure. loss function (Cross Entropy) </p>
+            <div> <img src="images/z10.jpg"></div>
+            <p>Figure. optimizer (Momentum) </p>
+          <p>The loss function of the model is cross entropy and the optimizer is the momentum. After selecting the loss function and optimizer, we have a 3 layers artificial neural network which contains 1 input layer, 1 hidden layer and 1 output layer. </p>
+            <p>&nbsp;</p>
+            <p>D. Training&nbsp; </p>
+             <div> <img src="images/z11.jpg"></div>
+            <p>Figure. training </p>
+            <p>&nbsp;</p>
+            <p>We use a for loop to train the model 300 times using the flatten training data that the value is between 0 and 1. When the epoch increases, the accuracy rate will increase. That is, the error between the flatten training data label and flatten testing label should be decreasing, </p>
+            <div> <img src="images/z12.jpg"></div>
+           <div> <img src="images/z13.jpg"></div>
+            <p>Figure. training loss result </p>
+            <p>At the beginning, the error rate was 235.53%. After the 300 times training, the error rate is 24.64%. The result is the error rate decreased 210.89%, and the parameters in the model were updated so that now the model can make a higher accuracy prediction.</p>
+            <p>&nbsp;</p>
+            <p>E. Make prediction (accuracy score & learning curve) </p>
+            <div> <img src="images/z14.jpg"></div>
+            <p>Figure. prediction </p>
+            <p>For the reduction, we use the predicted labels from the model to compare with the actual labels from the testing set. Again, the model only accepts vectors, so we use onecold() function to convert the matrix into a column vector like onehotbatch() function. The result is an accuracy score (93.22%). </p>
+      </div>
+    </div>
+    <div class="foot">
+        <p>Flux</p>
+    </div>
+</body>
+
+</html>
